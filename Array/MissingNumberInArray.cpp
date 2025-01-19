@@ -1,17 +1,20 @@
-#include<iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int missingNumberInArray(int arr[], int n){
-    int sum1 = (n * (n+1))/2;
-    int sum2 = 0;
-    for(int i=0;i<n-1;i++){
-        sum2+=arr[i];
+int missingNumber(vector<int> &arr) {
+
+    int n = arr.size() + 1;
+    int expectedSum = (n * (n + 1)) / 2;
+    int sum = 0;
+    for (int i = 0; i < n - 1; i++) {
+        sum += arr[i];
     }
-    return (sum1-sum2);
+    
+    return expectedSum - sum;
 }
 
-int main(){
-    int arr[] = {1,3,4,5,6,7,8};
-    int n = sizeof(arr)/sizeof(arr[0]);
-    cout<<missingNumberInArray(arr,n);
+int main() {
+    vector<int> arr = {};
+    cout << missingNumber(arr);
+    return 0;
 }
