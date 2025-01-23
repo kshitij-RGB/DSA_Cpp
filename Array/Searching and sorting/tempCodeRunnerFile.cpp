@@ -1,2 +1,3 @@
-
-    int tar2 = 0;
+int i=0;i<n;i++){
+        cout<<arr[i];
+    }
